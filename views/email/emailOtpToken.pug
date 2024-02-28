@@ -1,0 +1,11 @@
+extends baseEmail
+
+block content
+  p Hi #{firstName},
+  p You are just a few step away from completing your Gradell Tech Ltd user account verification.
+  p You must approve the following confrimation
+   
+  p code : #{emailOTP}
+
+  p Note: This code will expire in 10 minutes
+  p If you didn't perform this action, please ignore this email!

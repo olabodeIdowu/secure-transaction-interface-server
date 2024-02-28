@@ -1,0 +1,20 @@
+extends baseEmail
+
+block content
+  p Hi #{firstName},
+  p Note: This code will expire in 10 minutes
+ 
+  p code : #{emailOTP}
+ 
+  p Forgot your pin? Submit a PATCH request with your new pin, OTP, and pinConfirm to: #{url}.
+  //- p (Website for this action not yet implememnted.)
+  table.btn.btn-primary(role='presentation', border='0', cellpadding='0', cellspacing='0')
+    tbody
+      tr
+        td(align='left')
+          table(role='presentation', border='0', cellpadding='0', cellspacing='0')
+            tbody
+              tr
+                td
+                  a(href=`${url}`, target='_blank') Reset your pin
+  p If you didn't forget your pin, please ignore this email!
